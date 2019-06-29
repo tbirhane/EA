@@ -1,5 +1,7 @@
 package edu.mum.dao;
 
+import edu.mum.domain.User;
+
 import java.util.List;
 
 public interface GenericDao<T> {
@@ -14,6 +16,9 @@ public interface GenericDao<T> {
     void save(T t);
 
     void delete(Long id);
+    void delete(User user);
+    void detach(User user);
+
 
     T findOne(Long id);
 

@@ -30,6 +30,21 @@ public class UserServiceImpl implements edu.mum.service.UserService {
 	public User findByEmail(String email) {
 		return userDao.findByEmail(email);
 	}
- 
+
+	@Override
+	public void delete(Long id) {
+		userDao.delete(id);
+	}
+
+	@Override
+	public User update(User user) {
+		return  userDao.update(user);
+	}
+
+	@Override
+	public void detach(User user) {
+		userDao.detach(user);
+	}
+
 
 }
